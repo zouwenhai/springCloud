@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eurakeServer" />
+        <module name="eurekeClient" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eurakeServer" target="1.8" />
+      <module name="eurekaServer" target="1.8" />
+      <module name="eurekeClient" target="1.8" />
+      <module name="springCloud" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eurakeServer" options="-parameters" />
+      <module name="eurekaServer" options="-parameters" />
+      <module name="eurekeClient" options="-parameters" />
+      <module name="springCloud" options="-parameters" />
+    </option>
+  </component>
+</project>
