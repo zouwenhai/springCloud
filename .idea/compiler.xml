@@ -6,12 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="api" />
         <module name="eurakeServer" />
+        <module name="eurekaClientTwo" />
         <module name="eurekeClient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api" target="1.8" />
       <module name="eurakeServer" target="1.8" />
+      <module name="eurekaClientTwo" target="1.8" />
       <module name="eurekaServer" target="1.8" />
       <module name="eurekeClient" target="1.8" />
       <module name="springCloud" target="1.8" />
@@ -19,7 +23,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api" options="-parameters" />
       <module name="eurakeServer" options="-parameters" />
+      <module name="eurekaClientTwo" options="-parameters" />
       <module name="eurekaServer" options="-parameters" />
       <module name="eurekeClient" options="-parameters" />
       <module name="springCloud" options="-parameters" />
