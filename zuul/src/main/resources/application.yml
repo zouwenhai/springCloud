@@ -1,11 +1,16 @@
 spring:
   application:
     name: gateway-service-zuul
+    ##服务转发配置url
 zuul:
   routes:
     api-a:
       path: /api-gateway/**
       url: http://localhost:8763/
+      ##服务转发配置serviceId
+    api-b:
+      path: /api-b/**
+      serviceId: service-hi
 server:
   port: 8764
 eureka:
