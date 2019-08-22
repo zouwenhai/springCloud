@@ -16,7 +16,6 @@ import org.springframework.context.annotation.ComponentScan;
  **/
 @SpringBootApplication
 @ComponentScan("com.example.api.*")
-@EnableDiscoveryClient
 @EnableFeignClients
 public class ApiApplication {
 

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient //@EnableDiscoveryClient
 @RestController
+@RequestMapping("/api")
 public class EurekaClientTwoApplication {
 
     public static void main(String[] args) {
@@ -26,8 +27,14 @@ public class EurekaClientTwoApplication {
 
     @Value("${server.port}")
     String port;
+
     @RequestMapping("/hi")
-    public String home(@RequestParam String name){
-        return "hi "+name+",I'm from port:" +port;
+    public String home(@RequestParam String name) {//这种请求，参数必须要带在请求地址后面，否则访问不到
+        return "hi " + name + ",I'm from port:" + port;
+    }
+
+    @RequestMapping("/getUser")
+    public String getUser(@RequestParam String userName) {
+        return "hi " + userName + "I'm from port:" + port;
     }
 }

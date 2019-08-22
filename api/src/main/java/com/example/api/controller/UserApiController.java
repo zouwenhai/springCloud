@@ -21,4 +21,11 @@ public class UserApiController {
         log.info("result:{}",str);
         return str;
     }
+
+    @GetMapping("/user/getUser")
+    public String getUserName() {
+        String str = apiFeign.getUser("jack");
+        log.info("result:{}",str);
+        return str;
+    }
 }

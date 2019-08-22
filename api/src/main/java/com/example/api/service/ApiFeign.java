@@ -10,4 +10,8 @@ public interface ApiFeign {
 
     @RequestMapping("/hi")
     public String home(@RequestParam String name);
+
+    @RequestMapping("/getUser")
+    public String getUser(@RequestParam String userName);
+
 }
