@@ -22,9 +22,9 @@ public class ZuulServerApplication {
         SpringApplication.run(ZuulServerApplication.class);
     }
 
-    //把PreSimpleFilterj交给Spring管理
+  /*  //把PreSimpleFilterj交给Spring管理
     @Bean
     public PreSimpleFilter preSimpleFilter() {
         return new PreSimpleFilter();
-    }
+    }*/
 }

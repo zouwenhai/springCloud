@@ -3,9 +3,11 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    prefer-ip-address:true
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 3
+    lease-renewal-interval-in-seconds: 6
 server:
   port: 8762
 spring:
   application:
-    name: service-hi
+    name: service-hi2

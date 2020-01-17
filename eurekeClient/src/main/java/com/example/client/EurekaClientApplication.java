@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient //@EnableDiscoveryClient
 @RestController
+@RequestMapping("/api")
 public class EurekaClientApplication {
 
     public static void main(String[] args) {
